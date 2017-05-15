@@ -25,4 +25,5 @@ class StorePicker extends React.Component {
 	}
 }
 
-export default StorePicker;
+// Line below allows to go back to the index.js file and be able to import this component.
+export default StorePicker; 

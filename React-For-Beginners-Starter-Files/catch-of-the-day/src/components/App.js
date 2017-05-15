@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './Header'; //Because we are using the <Header /> component here
+import Order from './Order';
+import Inventory from './Inventory';
 
 class App extends React.Component {
 	render() {
@@ -9,8 +11,8 @@ class App extends React.Component {
 					{ /* Header Component */ }
 					<Header />
 				</div>
-
-
+				<Order />
+				<Inventory />
 			</div>
 		)
 	}
