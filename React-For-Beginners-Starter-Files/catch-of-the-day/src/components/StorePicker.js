@@ -45,10 +45,11 @@ class StorePicker extends React.Component {
 		console.log(this.storePickerInput);  //This prints the actual input value here
 		console.log("From goToStore - this.storePickerInput.value - " + this.storePickerInput.value); //This prints out the value via reference
 			// Use "ref" to grab the text from the <input>
-
+			const storeId = this.storePickerInput.value;
+			console.log(`Going to ${storeId}`);
 
 		// Second, we're going to transition from / to /store/:storeid
-		
+		this.context.router.transitionTo(`/store/${storeId}`);
 	}
 
 	render() {
@@ -66,6 +67,10 @@ class StorePicker extends React.Component {
 			</form> 
 		)
 	}
+}
+
+StorePicker.contextTypes = {
+	router: React.PropTypes.object
 }
 
 // Line below allows to go back to the index.js file and be able to import this component.
